@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ul li {
+  padding: 10px;
+  margin: 5px;
+  list-style-type: none;
+}
+
+ul li[stock*="n"] {
+  background-color: red;
+  color: white;
+}
+
+ul li[stock*="s"] {
+  background-color: green;
+  color: black;
+}
+
+
+    </style>
+</head>
+
+<body>
+  <h1>Lista de Productos</h1>
+  <ul>
+    <li stock="n">Producto 1</li>
+    <li stock="s">Producto 2</li>
+    <li stock="n">Producto 3</li>
+    <li stock="s">Producto 4</li>
+  </ul>
+</body>
+
+</html>

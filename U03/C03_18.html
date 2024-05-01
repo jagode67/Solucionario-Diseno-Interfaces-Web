@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+div {
+ border: 1px solid black;
+ box-shadow: 5px 5px;
+
+/* Sombra exterior que se desplaza hacia la zona inferior-derecha */
+box-shadow: 10px 10px 5px black;
+/* Sombra interior que se desplaza hacia la zona inferior-derecha */
+box-shadow: -10px -10px 5px black inset;
+
+box-shadow: 10px 10px 5px black,
+    20px 20px 5px darkred,
+    30px 30px 5px red,
+    40px 40px 5px lightcoral;
+}
+
+</style>
+
+<body>
+<div>Lorem Ipsum</div>
+
+</body>
+
+</html>

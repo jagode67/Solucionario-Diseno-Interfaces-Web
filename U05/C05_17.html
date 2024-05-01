@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación canvas</title>
+</head>
+<body>
+  
+<canvas id="lienzo" width="400" height="200"></canvas>
+
+<script>
+  canvas = document.getElementById("lienzo");
+  canvasContext = canvas.getContext('2d');
+  var posX = 50;  var posY = 50;
+  var velX = 3;   var velY = 3
+
+  setInterval(anima,20)
+
+  function anima(){
+    pintado()
+    movimiento()
+  }
+
+  function movimiento(){
+    posX+=velX;
+    posY+=velY;
+    if ((posX<0)||(posX>canvas.width)){velX=-velX}
+    if ((posY<0)||(posY>canvas.height)){velY=-velY}
+  }
+
+  function pintado(){
+    canvasContext.fillStyle= "#500";
+    canvasContext.fillRect(0, 0, 400,200)
+    pelota(posX,posY,10,"#00ff00")
+  }
+
+  function pelota(centroX, centroY, radio, Color){
+            canvasContext.fillStyle=Color;
+            canvasContext.beginPath();
+            canvasContext.arc(centroX,centroY,radio,0,Math.PI*2,true);
+            canvasContext.fill()
+        }
+</script>
+
+</body>
+</html>

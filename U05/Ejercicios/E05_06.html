@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curvar Línea SVG</title>
+    <style>
+        svg {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<svg id="miSVG" xmlns="http://www.w3.org/2000/svg">
+    <path id="miLinea" d="M50,50 L200,50" stroke="black" stroke-width="5" fill="none" />
+</svg>
+
+<script>
+    var linea = document.getElementById('miLinea');
+    var originalPath = linea.getAttribute('d');
+
+    // Función para curvar la línea
+    function curvarLinea() {
+        console.log("curva")
+        linea.setAttribute('d', 'M50,50 Q125,125 200,50');
+    }
+
+    // Función para volver a la línea original
+    function resetearLinea() {
+        linea.setAttribute('d', originalPath);
+    }
+
+    // Evento mouseover para curvar la línea
+    linea.addEventListener('mouseover', curvarLinea);
+
+    // Evento mouseout para resetear la línea
+    linea.addEventListener('mouseout', resetearLinea);
+</script>
+
+</body>
+</html>

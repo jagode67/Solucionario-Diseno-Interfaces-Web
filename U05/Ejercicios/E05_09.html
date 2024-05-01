@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento de Círculo con Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="miCanvas" width="400" height="200"></canvas>
+
+<script>
+    var canvas = document.getElementById('miCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var x = canvas.width / 2;
+    var y = canvas.height / 2;
+    var radio = 20;
+    var velocidadX = 2;
+
+    function dibujarCirculo() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(x, y, radio, 0, Math.PI * 2);
+        ctx.fillStyle = '#500';
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function actualizar() {
+        x += velocidadX;
+
+        // Rebotar en los bordes laterales de la pantalla
+        if (x + radio > canvas.width || x - radio < 0) {
+            velocidadX = -velocidadX;
+        }
+
+        dibujarCirculo();
+    }
+
+    setInterval(actualizar, 10);
+
+    // Evento para detectar las teclas de flecha izquierda y derecha
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            velocidadX = -Math.abs(velocidadX); // Mover hacia la izquierda
+        } else if (event.key === 'ArrowRight') {
+            velocidadX = Math.abs(velocidadX); // Mover hacia la derecha
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+Formato	                            Fabricante	            Comprimido	Pérdida de calidad	Códec
+MP4 (MPEG-4 Part 14)	            ISO/IEC	                Sí	        Sí y No	            H.264, H.265
+MOV (QuickTime Movie)	            Apple	                Sí	        Sí y No	            ProRes, H.264, HEVC
+AVI (Audio Video Interleave)	    Microsoft	            Sí	        Sí y No	            DivX, Xvid, H.264
+WMV (Windows Media Video)	        Microsoft	            Sí	        Sí	                WMV9, VC-1
+FLV (Flash Video)	                Adobe	                Sí	        Sí              	Sorenson H.263
+MKV (Matroska Video)	            MKV Association	        Sí	        Sí y No	            H.264, H.265, VP8, VP9
+WebM (Web Media Format)	            Google, Mozilla, Opera	Sí	        Sí y No	            VP8, VP9
+HEVC (High Efficiency Video Coding)	ISO/IEC	                Sí	        Sí	                H.265

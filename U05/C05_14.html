@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      svg {border: 1px solid;}
+      .bola{
+        r:20px;
+        fill:#500;
+        animation: mover 4s infinite alternate;
+      }
+
+      .bola:hover{
+        animation-play-state: paused;
+      }
+
+      @keyframes mover {
+        to{
+          transform: translateX(300px);
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <svg width="500" height="100">
+      <circle cx="30" cy="50" class="bola"/>
+    </svg>
+</body>
+</html>

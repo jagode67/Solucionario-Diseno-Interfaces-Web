@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover Bola con Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="miCanvas" width="400" height="400"></canvas>
+
+<script>
+    var canvas = document.getElementById('miCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var bola = {
+        x: 200,
+        y: 200,
+        radio: 10,
+        velocidad: 2
+    };
+
+    // Función para dibujar la bola
+    function dibujarBola() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(bola.x, bola.y, bola.radio, 0, Math.PI * 2);
+        ctx.fillStyle = '#500';
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    // Función para mover la bola hacia el puntero del ratón
+    function moverBola(event) {
+        var rect = canvas.getBoundingClientRect();
+        var mouseX = event.clientX - rect.left;
+        var mouseY = event.clientY - rect.top;
+
+        var deltaX = mouseX - bola.x;
+        var deltaY = mouseY - bola.y;
+
+        var distancia = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+        var velocidadX = (deltaX / distancia) * bola.velocidad;
+        var velocidadY = (deltaY / distancia) * bola.velocidad;
+
+        bola.x += velocidadX;
+        bola.y += velocidadY;
+
+        dibujarBola();
+    }
+
+    // Evento mousemove para mover la bola
+    canvas.addEventListener('mousemove', moverBola);
+</script>
+
+</body>
+</html>

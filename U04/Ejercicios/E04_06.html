@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+    #contenedor {
+      font-family: 'Comfortaa', cursive;
+      display: flex;
+      padding: 20px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .izquierda {
+      width: 70%;
+      padding: 12px;
+      background: rgba(14, 124, 116, 1.00);
+      color: white;
+    }
+
+    .derecha {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fila {
+      border: 1px solid lightgray;
+      padding: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="contenedor">
+    <div class="izquierda">Columna izquierda</div>
+    <div class="derecha">
+      <div class="fila">Derecha parte alta</div>
+      <div class="fila">Derecha parte baja</div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar Curva SVG</title>
+  <style>
+    /* Estilos opcionales */
+    #svg-container {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="svg-container">
+  <svg width="400" height="400">
+    <path id="miCamino" d="M50,50 C100,150 200,150 250,50" stroke="black" stroke-width="2" fill="none" />
+  </svg>
+</div>
+
+<button onclick="modificarCurva()">Modificar Curva</button>
+
+<script>
+  function modificarCurva() {
+    // Acceder al elemento <path>
+    var path = document.getElementById("miCamino");
+    
+    // Modificar el atributo 'd' para cambiar la curva
+    path.setAttribute("d", "M50,50 C100,50 200,200 250,50");
+  }
+</script>
+
+</body>
+</html>

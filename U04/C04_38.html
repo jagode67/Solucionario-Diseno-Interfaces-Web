@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @media print {
+
+        /* Ocultar zonas no relevantes */
+        .navigation,
+        .banner,
+        .menu {
+            display: none;
+        }
+
+        /* Cambiar tipografía y colores */
+        body,
+        .content {
+            font-family: Ecofont, sans-serif;
+            background: white;
+            color: black;
+        }
+
+        /* Mostrar enlaces */
+        a::after {
+            content: "(" attr(href) ")";
+            padding: 0 5px;
+        }
+    }
+</style>
+
+<body>
+    <a href="javigomez.org">Javi</a>
+</body>
+
+</html>

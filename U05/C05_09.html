@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg {
+            border: 1px solid;
+        }
+        path{fill:#500}
+    </style>
+</head>
+
+<body>
+    <svg width="500" height="500" viewBox="0 0 500 500">
+        <path id="estrella" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-15-11h18z"/>
+        <use xlink:href="#estrella"  transform="scale(3)"/>
+        <use xlink:href="#estrella"  transform="translate(100)"/>
+    </svg>
+</body>
+</html>

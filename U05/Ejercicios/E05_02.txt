@@ -1,0 +1,6 @@
+CC BY (Atribución): Permite distribuir, remezclar, adaptar y construir sobre el material en cualquier medio o formato, siempre que se dé crédito al creador. También permite el uso comercial.
+CC BY-SA (Atribución-CompartirIgual): Similar a CC BY, pero si modificas el material, debes licenciarlo bajo los mismos términos.
+CC BY-NC (Atribución-NoComercial): Permite la distribución, remix, adaptación y construcción solo con fines no comerciales, siempre que se atribuya al creador.
+CC BY-NC-SA (Atribución-NoComercial-CompartirIgual): Similar a CC BY-NC, pero también requiere que las adaptaciones se compartan bajo los mismos términos.
+CC BY-ND (Atribución-SinDerivadas): Permite copiar y distribuir el material sin modificaciones, siempre que se atribuya al creador. También permite el uso comercial.
+CC BY-NC-ND (Atribución-NoComercial-SinDerivadas): Similar a CC BY-ND, pero solo para uso no comercial y sin adaptaciones.

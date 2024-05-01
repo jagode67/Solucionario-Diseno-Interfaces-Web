@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h4,
+    h5 {
+        color: gray
+    }
+
+    div p {
+        color: orange;
+    }
+
+    div>span {
+        font-weight: bold;
+    }
+
+    h1+span {
+        color: pink
+    }
+
+    h3~p {
+        color: green
+    }
+
+    #lista * {
+        color: violet;
+    }
+</style>
+
+<body>
+    <h4>H4 gris</h4>
+    <h5>H5 gris</h5>
+    <div>
+        <p>Elemento</p>
+    </div>
+    <div>
+        <section>
+            Sección <span>no destaca</span>
+        </section>
+        Sección <span>destaca</span>
+    </div>
+    <div>
+        <h1>Uno</h1>
+        <span>Rosa</span>
+        <span>No rosa</span>
+    </div>
+    <article>
+        <h3>Titulo</h3>
+        <p>uno verde</p>
+        <p>dos verde</p>
+    </article>
+    <ul id="lista">
+        <li>uno violeta</li>
+        <p>dos violeta</p>
+    </ul>
+
+
+
+</body>
+
+</html>

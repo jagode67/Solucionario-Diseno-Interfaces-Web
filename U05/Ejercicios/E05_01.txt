@@ -1,0 +1,9 @@
+Formato	            Tipo	    Compresión con pérdida	Soporta animación	Transparencia
+JPEG (.jpg, .jpeg)	Rasterizada	    Sí	                    No	                No
+PNG (.png)	        Rasterizada	    No (sin pérdida)	    No	                Sí
+GIF (.gif)	        Rasterizada	    Sí	                    Sí	            Sí (limitada)
+TIFF (.tiff, .tif)	Rasterizada	    Sí y No (sin pérdida)	No	                Sí
+BMP (.bmp)	        Rasterizada	    No (sin pérdida)	    No	                Sí
+SVG (.svg)	        Vectorial	    No (sin pérdida)	    No	                Sí
+WebP (.webp)	    Rasterizada	    Sí	                    No	                Sí
+HEIF (.heif, .heic)	Rasterizada	    Sí	                    No	                Sí

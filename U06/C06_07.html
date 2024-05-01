@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles manuales de video</title>
+    <style>
+        video{
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="player">
+        <video controls>
+            <source src="https://javigomez.org/ESIC/multi/ballenas.mp4" type="video/mp4" />
+            <p>
+                No soportado
+                <a href="https://javigomez.org/ESIC/multi/ballenas.mp4">link</a>
+            </p>
+        </video>
+
+        <div class="controls">
+            <button id="playpause">Play</button>
+            <button id="stopB">Stop</button>
+            <button id="rwd">Rwd</button>
+            <button id="fwd">Fwd</button>
+            <span class="time">00:00</span>
+        </div>
+    </section>
+    <script>
+        const timeLabel = document.querySelector(".time");
+        const player = document.querySelector("video");
+        player.removeAttribute("controls");
+        window.playpause.onclick=()=>{
+            if (player.paused) {
+                player.play();
+                window.playpause.textContent = "Pause";
+            } else {
+                player.pause();
+                window.playpause.textContent = "Play";
+            }
+        };
+        window.stopB.onclick = () => {
+            player.pause();
+            player.currentTime = 0;
+            window.playpause.textContent = "Play";
+        };
+        window.rwd.onclick = () => {
+            player.currentTime -= 3;
+        };
+
+        window.fwd.onclick = () => {
+            player.currentTime += 3;
+        };
+        player.ontimeupdate = () => {
+            const minutes = Math.floor(player.currentTime / 60);
+            const seconds = Math.floor(player.currentTime - minutes * 60);
+            const minuteValue = minutes < 10 ? `0${minutes}` : minutes;
+            const secondValue = seconds < 10 ? `0${seconds}` : seconds;
+            const mediaTime = `${minuteValue}:${secondValue}`;
+            timeLabel.textContent = mediaTime;
+        };
+    </script>
+</body>
+
+</html>

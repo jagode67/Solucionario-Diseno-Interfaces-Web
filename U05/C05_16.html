@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check box personalizado</title>
+  <style>
+    .contenedor {
+      position: relative;
+    }
+
+    .check {
+      appearance: none; 
+      width: 14px;
+      height: 14px;
+      border: 1px solid #500;
+      vertical-align: bottom;
+    }
+
+    .linea {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: #500;
+      position: absolute;
+      left: 5px;
+      top: 3px;
+      z-index: -1;
+    }
+
+    label {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #500;
+    }
+
+    .animado {
+      transition: stroke-dashoffset .5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <input type="checkbox" id="check" class="check" >
+    <label for="check">Aceptar condiciones</label>
+    
+    <svg class="linea" xmlns="http://www.w3.org/2000/svg">
+      <path class="trazo" d="M2 6.5C2 6.5 5 14.5 6.5 12.5C8 10.5 9.5 2 9.5 2" stroke-width="3" stroke-linecap="round">
+      </path>
+    </svg>
+  </div>
+
+  <script>
+    var check = document.querySelector("#check");
+    var trazo = document.querySelector(".trazo");
+    var length = trazo.getTotalLength();
+
+    trazo.style.strokeDasharray = length;
+    trazo.style.strokeDashoffset = length;
+
+    check.addEventListener("change", function () {
+      if (this.checked == true) {
+        trazo.classList.add("animado");
+        trazo.style.strokeDashoffset = 0;
+      } else {
+        trazo.classList.remove("animado");
+        trazo.style.strokeDashoffset = length;
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
+
+
+
+  

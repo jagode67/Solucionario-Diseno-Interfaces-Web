@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a::before {
+  content: "\2192";
+  margin-right: 5px;
+  color: gray;
+}
+
+a::after {
+  content: "(" attr(href) ")";
+  margin-left: 5px;
+  color: blue;
+}
+
+  </style>
+</head>
+
+<body>
+  <p>
+    <a href="https://www.google.com">Google</a>
+  </p>
+</body>
+
+</html>

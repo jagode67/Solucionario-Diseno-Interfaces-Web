@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  a{
+    text-decoration: none;
+  }
+a::before {
+  content: "\2197"; /* Unicode flecha diagonal */
+  margin-right: 5px; 
+}
+a::after {
+  content: " (" attr(href) ")"; /* URL entre paréntesis */
+}
+
+</style>
+<body>
+  <a href="https://www.ejemplo.com">Enlace de ejemplo</a>
+</body>
+</html>

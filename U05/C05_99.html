@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    canvas {
+        border: 1px solid black;
+    }
+</style>
+
+</head>
+<body>
+  <canvas id="miCanvas" width="400" height="400"></canvas>
+
+<script>
+  // Obtener el elemento canvas y su contexto 2D
+var canvas = document.getElementById('miCanvas');
+var ctx = canvas.getContext('2d');
+
+// Definir la posición inicial del objeto
+var x = 50;
+var y = 50;
+
+// Definir la función de animación
+function animar() {
+    // Limpiar el lienzo
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Dibujar un rectángulo en la nueva posición
+    ctx.fillStyle = 'red';
+    ctx.fillRect(x, y, 50, 50);
+
+    // Actualizar la posición del objeto
+    x += 2;
+    y += 1;
+
+    // Solicitar que se vuelva a llamar a la función animar en el siguiente fotograma
+    requestAnimationFrame(animar);
+}
+
+// Llamar a la función de animación por primera vez
+
+animar();
+</script>
+</body>
+</html>

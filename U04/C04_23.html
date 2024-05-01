@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cont {
+        display: grid;
+        grid-template-columns: repeat(2, 50px);
+        grid-template-columns: 10px repeat(2, 50px);
+        grid-template-columns: repeat(2, 50px 20px);
+        grid-template-rows: repeat(3, 100px);
+        grid-auto-rows: 50px;
+    }
+
+    .ele {
+        border: 1px solid;
+    }
+</style>
+
+<body>
+    <div class="cont">
+        <div class="ele">1</div>
+        <div class="ele">2</div>
+        <div class="ele">3</div>
+        <div class="ele">4</div>
+        <div class="ele">5</div>
+    </div>
+
+</body>
+
+</html>

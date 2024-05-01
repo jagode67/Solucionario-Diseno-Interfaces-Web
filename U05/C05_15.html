@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {      border: 1px solid;    }
+
+    .estre {
+      fill: none;
+      stroke: #500;
+      stroke-width: 2px;
+      stroke-dasharray: 500px;
+      stroke-dashoffset: 500px;
+      animation: dibuja 3s forwards;
+    }
+
+    .cua {
+      fill: none;
+      stroke: #500;
+      stroke-width: 2px;
+      stroke-dasharray: 5px;
+      stroke-dashoffset: 0px;
+    }
+
+    #e2 {
+      width: 100px;
+      height: 70px;
+      &:hover .cua {
+        animation: mueve 1s forwards;
+      }
+    }
+
+
+    @keyframes dibuja {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes mueve {
+      to {
+        stroke-dashoffset: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg width="107" height="101" viewBox="0 0 107 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M53.5 0L65.9605 38.3496H106.284L73.6616 62.0509L86.1221 100.4L53.5 76.6991L20.8779 100.4L33.3384 62.0509L0.716362 38.3496H41.0395L53.5 0Z"
+      class="estre" />
+  </svg>
+  <svg id="e2">
+    <rect x="10" y ="10" width="80" height="50" class="cua"/>
+  </svg>
+
+</body>
+
+</html>

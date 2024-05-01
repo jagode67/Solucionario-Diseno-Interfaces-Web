@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg {
+            border: 1px solid;
+        }
+        svg path{
+            stroke: purple;
+            stroke-width: 3px;
+            vector-effect: non-scaling-stroke;
+        }
+        .add1{fill:green}
+        .add2{fill:#500}
+        
+        @media screen and (width<600px){
+            .add1{display: none;}
+        }
+        @media screen and (width<300px){
+            .add2{display: none;}
+        }
+    </style>
+</head>
+
+<body>
+    <svg>
+        <path id="est" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-15-11h18z"/>
+        <use xlink:href="#est" class="add1" transform="scale(3)"/>
+        <use xlink:href="#est" class="add2" transform="translate(100)"/>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capa Giratoria con Animación CSS</title>
+    <style>
+        .capa {
+            width: 100px;
+            height: 100px;
+            background-color: #500;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: girar 2s linear infinite;
+        }
+
+        @keyframes girar {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="capa"></div>
+
+<script>
+    detenerAnimacion()
+    // Función que detiene la animación cuando el ratón se pasa por encima
+    function detenerAnimacion() {
+        var capa = document.querySelector('.capa');
+        capa.style.animationPlayState = 'paused';
+    }
+
+    // Función que reinicia la animación cuando el ratón se aleja
+    function reiniciarAnimacion() {
+        var capa = document.querySelector('.capa');
+        capa.style.animationPlayState = 'running';
+    }
+
+    // Evento mouseover para detener la animación
+    document.querySelector('.capa').addEventListener('mouseout', detenerAnimacion);
+
+    // Evento mouseout para reiniciar la animación
+    document.querySelector('.capa').addEventListener('mouseover', reiniciarAnimacion);
+</script>
+
+</body>
+</html>

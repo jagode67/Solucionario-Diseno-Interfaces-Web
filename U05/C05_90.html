@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar Curva SVG con Animación</title>
+  <style>
+/* Estilos opcionales */
+svg {
+
+  &:hover {
+  cursor: pointer;
+  }
+}
+#sur,#norte, #este, #oeste {
+  stroke: #500;
+  stroke-width: 2;
+  fill: none;
+}
+
+@keyframes aniSur {
+  0% {d: path("M5,35 C75,35 150,35 200,35");  }
+  50% {d: path("M5,35 C75,40 150,40 200,35");  }
+  100% {d: path("M5,35 C75,35 150,35 200,35");  }
+}
+
+@keyframes aniNorte {
+  0% {d: path("M5,5 C75,5 150,5 200,5");  }
+  50% {d: path("M5,5 C75,0 150,0 200,5");  }
+  100% {d: path("M5,5 C75,5 150,5 200,5");  }
+}
+
+@keyframes aniEste {
+  0% {d: path("M200,5 C200,15 200,25 200,35");  }
+  50% {d: path("M200,5 C205,15 205,25 200,35");  }
+  100% {d: path("M200,5 C200,15 200,25 200,35");  }
+}
+
+@keyframes aniOeste {
+  0% {d: path("M5,5 C5,15 5,25 5,35");  }
+  50% {d: path("M5,5 C0,15 0,25 5,35");  }
+  100% {d: path("M5,5 C5,15 5,25 5,35");  }
+}
+  </style>
+</head>
+
+<body>
+
+  <div id="boton">
+<svg width="205" height="40">
+  <path id="norte" d="M5,5  200,5" />
+  <path id="sur" d="M5,35  200,35" />
+  <path id="este" d="M200,5  200,35" />
+  <path id="oeste" d="M5,5  5,35" />
+  <text x="50%" y="50%" fill="#500" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif"
+font-size="20">
+Aceptar
+  </text>
+</svg>
+  </div>
+
+  <script>
+boton = document.getElementById("boton");
+boton.addEventListener("mousedown", modificarCurva);
+boton.addEventListener("click", ejecutar);
+function ejecutar(){
+  console.log("ejecutar")
+}
+
+function modificarCurva() {
+  var sur = document.getElementById("sur");
+  var norte = document.getElementById("norte");
+  var este = document.getElementById("este");
+  var oeste = document.getElementById("oeste");
+  // Reiniciar la animación
+  sur.style.animation = "none";
+  norte.style.animation = "none";
+  este.style.animation = "none";
+  oeste.style.animation = "none";
+  setTimeout(function () {
+    sur.style.animation = "aniSur .5s";
+    norte.style.animation = "aniNorte .5s";
+    este.style.animation = "aniEste .5s";
+    oeste.style.animation = "aniOeste .5s";
+  }, 1);
+}
+  </script>
+</body>
+</html>

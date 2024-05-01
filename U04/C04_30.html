@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cont {
+        display: grid;
+        gap: 3px;
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-areas:
+            "header header header"
+            "sidebar content content"
+            "footer footer footer"
+    }
+    div {border: 1px solid;}
+    .ele1 {grid-area: header;}
+    .ele2 {grid-area: sidebar;}
+    .ele3 {grid-area: content;}
+    .ele4 {grid-area: footer;}
+</style>
+
+<body>
+    <div class="cont">
+        <div class="ele1">cabecera</div>
+        <div class="ele2">menú</div>
+        <div class="ele3">contenido</div>
+        <div class="ele4">pie</div>
+    </div>
+</body>
+
+</html>

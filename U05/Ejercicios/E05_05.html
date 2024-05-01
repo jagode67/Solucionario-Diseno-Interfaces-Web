@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformación de Cuadrado a Círculo</title>
+    <style>
+        svg {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<svg id="miSVG" xmlns="http://www.w3.org/2000/svg">
+    <rect id="miCuadrado" x="50" y="50" width="100" height="100" fill="#500" />
+</svg>
+
+<script>
+    // Función para transformar el cuadrado en círculo
+    function transformarEnCirculo() {
+        var cuadrado = document.getElementById('miCuadrado');
+        cuadrado.setAttribute('rx', '50');
+        cuadrado.setAttribute('ry', '50');
+        cuadrado.setAttribute('width', '100');
+        cuadrado.setAttribute('height', '100');
+    }
+
+    // Evento click para transformar el cuadrado en círculo
+    document.getElementById('miSVG').addEventListener('click', transformarEnCirculo);
+</script>
+
+</body>
+</html>

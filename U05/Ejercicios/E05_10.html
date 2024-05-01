@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento de Rectángulo con Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="miCanvas" width="400" height="200"></canvas>
+
+<script>
+    var canvas = document.getElementById('miCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var x = canvas.width / 2;
+    var y = canvas.height / 2;
+    var ancho = 50;
+    var alto = 30;
+    var velocidad = 5;
+
+    function dibujarRectangulo() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#500';
+        ctx.fillRect(x - ancho / 2, y - alto / 2, ancho, alto);
+    }
+
+    function actualizar() {
+        dibujarRectangulo();
+    }
+
+    setInterval(actualizar, 10);
+
+    // Evento para detectar las teclas de flecha
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft' && x - ancho / 2 > 0) {
+            x -= velocidad; // Mover hacia la izquierda si no se sale del canvas
+        } else if (event.key === 'ArrowRight' && x + ancho / 2 < canvas.width) {
+            x += velocidad; // Mover hacia la derecha si no se sale del canvas
+        } else if (event.key === 'ArrowUp' && y - alto / 2 > 0) {
+            y -= velocidad; // Mover hacia arriba si no se sale del canvas
+        } else if (event.key === 'ArrowDown' && y + alto / 2 < canvas.height) {
+            y += velocidad; // Mover hacia abajo si no se sale del canvas
+        }
+    });
+</script>
+
+</body>
+</html>

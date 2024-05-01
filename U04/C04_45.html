@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fuente</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    #progreso {
+      position: fixed;
+      top: 0;
+      width: 0%;
+      background: #500;
+      height: 10px;
+      animation: avance auto linear;
+      animation-timeline: scroll(root block);
+    }
+    @keyframes avance {
+      from { width: 0%;}
+      to {width: 100%;}
+    }
+    p{
+      width: 50%; height: 1000px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="progreso"></div>
+  <p>
+    Lorem …………………
+  </p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    * {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    #contenedor {
+      border: solid 1px black;
+      border-radius: 5px;
+      max-width: 300px;
+      background-color: lightsalmon;
+    }
+
+    .elemento {
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    div.elemento:not(:last-child) {
+      border-bottom: 1px solid gray;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+    }
+
+    .texto {
+      padding-left: 10px;
+    }
+
+    h4 {
+      color: red;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="contenedor">
+
+    <div class="elemento">
+      <div class="imagen">
+        <img src="https://javigomez.org/ESIC/img/01.jpg">
+      </div>
+      <div class="texto">
+        <h4>Lara</h4>
+        Suspiro Verde, 12
+      </div>
+    </div>
+
+    <div class="elemento">
+      <div class="imagen">
+        <img src="https://javigomez.org/ESIC/img/02.jpg">
+      </div>
+      <div class="texto">
+        <h4>Carlos</h4>
+        Suspiro verde, 14
+      </div>
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>

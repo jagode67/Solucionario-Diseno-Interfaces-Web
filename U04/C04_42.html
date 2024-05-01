@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Fuente</title>
+  <style>
+    .p {
+      width: 30px;
+      height: 30px;
+      background: #500;
+      border-radius: 50%;
+      position: relative;
+
+      &:hover {
+        animation-name: muevete;
+        animation-duration: 3s;
+      }
+    }
+
+    @keyframes muevete {
+      from {
+        transform: translate(0px, 0px);
+      }
+
+      to {
+        transform: translate(100px, 0px);
+      }
+    }
+
+    body {
+      display: grid;
+      place-content: center;
+      min-height: 50vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="p"></div>
+</body>
+
+</html>

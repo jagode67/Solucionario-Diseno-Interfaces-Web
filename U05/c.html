@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar Curva SVG con Animación</title>
+  <style>
+    /* Estilos opcionales */
+    #svg-container {
+      width: 400px;
+      height: 400px;
+    }
+
+    #otro {
+      stroke: black;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    @keyframes modifotro {
+      0% {
+        d: path("M0,50 C75,50 150,50 200,50");
+      }
+      50% {
+        d: path("M0,50 C75,100 150,100 200,50");
+      }
+      100% {
+        d: path("M0,50 C75,50 150,50 200,50");
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="svg-container">
+  <svg width="400" height="400">
+    <path id="otro" d="M0,50  200,50" />
+  </svg>
+</div>
+<button onclick="modificarCurva()">Modificar Curva</button>
+
+<script>
+  function modificarCurva() {
+    var path = document.getElementById("otro");
+    console.log("xxx");
+    path.style.animation = "modifotro 2s"; // Add semicolon
+    path.style.animationPlayState = "running"; // (Optional) Reset animation
+  }
+</script>
+
+</body>
+</html>

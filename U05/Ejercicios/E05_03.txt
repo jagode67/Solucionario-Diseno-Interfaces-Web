@@ -1,0 +1,10 @@
+Formato	                                Fabricante	                        Comprimido	Pérdida de calidad	Códec
+WAV (Waveform Audio File Format)	    Microsoft	                            No	        No	            PCM (Pulse Code Modulation)
+AIFF (Audio Interchange File Format)	Apple                                   No	        No	            PCM (Pulse Code Modulation)
+FLAC (Free Lossless Audio Codec)	    Xiph.Org Foundation                 	Sí      	No	            FLAC
+ALAC (Apple Lossless Audio Codec)	    Apple	                                Sí      	No	            ALAC
+MP3 (MPEG-1 Audio Layer III)	        Fraunhofer IIS	                        Sí      	Sí	            MP3
+AAC (Advanced Audio Coding)	            Dolby Laboratories	                    Sí      	Sí	            AAC
+OGG                                     Vorbis	Xiph.Org Foundation	            Sí      	Sí	            Vorbis
+Opus	                                Xiph.Org Foundation, Mozilla, Google	Sí      	Sí	            Opus
+WMA (Windows Media Audio)	            Microsoft	                            Sí      	Sí	            WMA
